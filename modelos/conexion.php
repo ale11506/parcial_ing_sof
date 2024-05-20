@@ -27,5 +27,37 @@ abstract class Conexion{
 
     }
 
+     // METODO PARA EJECUTAR SENTENCIAS SQL
+
+     public function ejecutar($sql){
+        $conexion = self::connectar();
+        $sentencia = $conexion->prepare($sql);
+        $resultado = $sentencia->execute();
+        $idInsertado = $conexion->lastInsertId();
+        self::$conexion = null;
+
+        return [
+            "resultado" => $resultado,
+            "id" => $idInsertado
+        ];
+        
+    }
+
+    // METODO PARA CONSULTAR INFORMACION
+    public function servir($sql){
+        $conexion = self::connectar();
+        $sentencia = $conexion->prepare($sql);
+        $sentencia->execute();
+        $data = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $datos = [];
+        foreach ($data as $k => $v) {
+            $datos[] = array_change_key_case($v, CASE_LOWER);
+        }
+        self::$conexion = null;
+
+        return $datos;
+        
+    }
+
    
 }
