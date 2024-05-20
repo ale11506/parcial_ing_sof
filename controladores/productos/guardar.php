@@ -7,7 +7,7 @@ $_POST['cont_nombre'] = htmlspecialchars($_POST['cont_nombre']);
 $_POST['cont_menu'] = htmlspecialchars($_POST['cont_menu']);
 $_POST['cont_fecha'] = htmlspecialchars($_POST['cont_fecha']);
 $_POST['cont_hora'] = htmlspecialchars($_POST['cont_hora']);
-$_POST['cont_comida'] = htmlspecialchars($_POST['cont_tiempo_comida']);
+$_POST['cont_tiempo_comida'] = htmlspecialchars($_POST['cont_tiempo_comida']);
 $_POST['cont_servidor'] = htmlspecialchars($_POST['cont_servidor']);
 
 if ($_POST['cont_nombre'] == '' || $_POST['cont_menu'] == '' || $_POST['cont_fecha'] == '' || $_POST['cont_hora'] ==''|| $_POST['per_tiempo_comida'] =='' || $_POST['cont_servidor'== '']  ) {
