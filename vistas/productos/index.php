@@ -4,7 +4,7 @@ include_once '../templates/header.php'; ?>
 
 <h1 class="text-center">FORMULARIO CONTROL DE COMIDA </h1>
 <div class="row justify-content-center">
-    <form action="/controladores/personas/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6"action="/TAREA_INSERT_SELECT/controladores/clientes/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6">
+    <form action="/controladores/productos/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6"action="/TAREA_INSERT_SELECT/controladores/clientes/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6">
         <div class="row mb-3">
             <div class="col">
                 <label for="cont_nombre_servido">NOMBRE Y APELLIDO</label>
